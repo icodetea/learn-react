@@ -2,3 +2,8 @@
 // You can render anything you want to the screen, doesn't have
 // to be an h1 element.
 
+import {createRoot} from "react-dom/client";
+
+createRoot(document.getElementById("root")).render(
+    <h1>Hello, React!</h1>
+)
