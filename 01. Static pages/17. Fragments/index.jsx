@@ -1,11 +1,14 @@
-import { createRoot } from "react-dom/client"
+import {createRoot} from "react-dom/client"
+import {Fragment} from "react";
+
 const root = createRoot(document.getElementById("root"))
 
 function Page() {
     return (
-        <div>
+         <Fragment>
+             {/*react element that allows us to return multiple elements in one render without wrapping them in a parent element*/}
             <header>
-                <img src="react-logo.png" width="40px" alt="React logo" />
+                <img src="react-logo.png" width="40px" alt="React logo"/>
             </header>
             <main>
                 <h1>Reason I am excited to learn React</h1>
@@ -17,10 +20,10 @@ function Page() {
             <footer>
                 <small>© 2024 Ziroll development. All rights reserved.</small>
             </footer>
-        </div>
+        </Fragment>
     )
 }
 
 root.render(
-    <Page />
+    <Page/>
 )

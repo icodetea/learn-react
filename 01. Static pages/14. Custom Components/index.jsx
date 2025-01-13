@@ -1,5 +1,7 @@
-import { createRoot } from "react-dom/client"
+import {createRoot} from "react-dom/client"
+
 const root = createRoot(document.getElementById("root"))
+
 
 /**
  * Challenge (part 1):
@@ -10,7 +12,15 @@ const root = createRoot(document.getElementById("root"))
  * 
  * Render the Page component.
  */
-// 1:14:04
+
+function Page() {
+    return <ol>
+        <li>Why I'm excited to learn React</li>
+        <li>Building interactive user interfaces</li>
+        <li>Improving my frontend development skills</li>
+    </ol>
+}
+
 root.render(
-    
+    Page()
 )

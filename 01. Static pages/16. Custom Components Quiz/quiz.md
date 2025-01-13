@@ -1,5 +1,8 @@
-1. What is a React component?
+1. What is a React component? 
 
+    a decoupled element that can be used by a reference. 
+
+    a function that returns react elements
 
 2. What's wrong with this code?
 ```
@@ -9,6 +12,8 @@ function myComponent() {
     )
 }
 ```
+
+function is not used
 
 3. What's wrong with this code?
 ```
@@ -22,3 +27,4 @@ function Header() {
 
 root.render(Header())
 ```
+it should be `root.render(<Header/>)`
