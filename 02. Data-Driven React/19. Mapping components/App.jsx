@@ -10,11 +10,11 @@ export default function App() {
      */
     
     const jokeElements = jokesData.map((joke) => {
-        return <Joke  />
+        return <Joke {...joke}/>
     })
     return (
         <main>
-            
+            {jokeElements}
         </main>
     )
 }

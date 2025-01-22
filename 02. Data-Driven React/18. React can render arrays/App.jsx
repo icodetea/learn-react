@@ -1,18 +1,18 @@
 // import Joke from "./Joke"
 
 export default function App() {
-    
-    /**
-     * Challenge: manually turn this string array into an array of
-     * JSX elements by surrounding each ninja turtle with an <h2> element
-     */
-    
-    const ninjaTurtles = ["Donatello", "Michaelangelo", "Rafael", "Leonardo"]
-    return (
-        <main>
-            {ninjaTurtles}
-        </main>
-    )
+
+	/**
+	 * Challenge: manually turn this string array into an array of
+	 * JSX elements by surrounding each ninja turtle with an <h2> element
+	 */
+
+	const ninjaTurtles = ["Donatello", "Michaelangelo", "Rafael", "Leonardo"]
+	return (
+			<main>
+				{ninjaTurtles.map(ninja => <h2>{ninja}</h2>)}
+			</main>
+	)
 }
 
 // <Joke
