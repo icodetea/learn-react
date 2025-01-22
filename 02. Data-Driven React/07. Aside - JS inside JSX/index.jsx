@@ -9,7 +9,7 @@ function App() {
    */
   
   return (
-    <h1>Hello {firstName} + " " + lastName</h1>
+    <h1>Hello {firstName} {lastName}</h1>
   )
 }
 
