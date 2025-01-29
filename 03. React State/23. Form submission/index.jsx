@@ -2,10 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 function App() {
+  function handleSubmit(e) {
+    e.preventDefault();
+    let formElement = e.currentTarget;
+    const formData = new FormData(formElement)
+    const email = formData.get("email")
+    const password = formData.get("password")
+    console.log(email, password)
+    formElement.reset()
+  }
+
   return (
     <section>
       <h1>Signup form</h1>
-      <form>
+      <form method="POST" onSubmit={e => handleSubmit(e)}>
         <label htmlFor="email">Email:</label>
         <input id="email" type="email" name="email" placeholder="joe@schmoe.com" />
         <br />

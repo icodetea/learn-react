@@ -12,8 +12,8 @@ function App() {
   function signUp(formData) {
     const email = formData.get("email")
     const password = formData.get("password")
-    const employmentStatus = formData.get("employmentStatus")
-    console.log(employmentStatus)
+    const dietaryRestrictions = formData.getAll("dietaryRestrictions")
+    alert(dietaryRestrictions)
   }
 
   return (
@@ -31,18 +31,18 @@ function App() {
         <textarea id="description" name="description" defaultValue="This is a description"></textarea>
 
         <fieldset>
-          <legend>Employment Status:</legend>
+          <legend>Dietary Restrictions:</legend>
           <label>
-            <input type="radio" name="employmentStatus" value="unemployed" />
-            Unemployed
+            <input type="checkbox" name="dietaryRestrictions" value="vegan" />
+            Vegan
         </label>
           <label>
-            <input type="radio" name="employmentStatus" value="part-time" />
-            Part-time
+            <input type="checkbox" name="dietaryRestrictions" defaultChecked={true} value="kosher" />
+            Kosher
         </label>
           <label>
-            <input type="radio" name="employmentStatus" defaultChecked={true} value="full-time" />
-            Full-time
+            <input type="checkbox" name="dietaryRestrictions" defaultChecked={true} value="gluten-free" />
+            Gluten Free
         </label>
         </fieldset>
 

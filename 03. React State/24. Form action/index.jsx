@@ -10,7 +10,8 @@ function App() {
   
   function signUp(formData) {
     const email = formData.get("email")
-    console.log(email)
+    const password = formData.get("password")
+    console.log(email, password)
   }
   
   return (
