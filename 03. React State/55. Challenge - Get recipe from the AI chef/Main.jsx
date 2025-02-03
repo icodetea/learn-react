@@ -1,7 +1,7 @@
 import React from "react"
 import IngredientsList from "./components/IngredientsList"
 import ClaudeRecipe from "./components/ClaudeRecipe"
-import { getRecipeFromChefClaude, getRecipeFromMistral } from "./ai"
+import {getRecipeFromFakeAI} from "./ai"
 
 /**
  * Challenge: Get a recipe from the AI!
@@ -22,12 +22,12 @@ import { getRecipeFromChefClaude, getRecipeFromMistral } from "./ai"
 
 export default function Main() {
     const [ingredients, setIngredients] = React.useState(
-        ["all the main spices", "pasta", "ground beef", "tomato paste"]
+        []
     )
-    const [recipeShown, setRecipeShown] = React.useState(false)
+    const [recipe, setRecipe] = React.useState("")
 
-    function toggleRecipeShown() {
-        setRecipeShown(prevShown => !prevShown)
+    function getRecipe() {
+        getRecipeFromFakeAI(ingredients).then(recipe => {setRecipe(recipe)})
     }
 
     function addIngredient(formData) {
@@ -50,11 +50,11 @@ export default function Main() {
             {ingredients.length > 0 &&
                 <IngredientsList
                     ingredients={ingredients}
-                    toggleRecipeShown={toggleRecipeShown}
+                    toggleRecipeShown={getRecipe}
                 />
             }
 
-            {recipeShown && <ClaudeRecipe />}
+            {recipe && <ClaudeRecipe recipe={recipe}/>}
         </main>
     )
 }

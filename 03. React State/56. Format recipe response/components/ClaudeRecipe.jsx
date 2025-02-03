@@ -1,3 +1,5 @@
+import ReactMarkdown from 'react-markdown'
+
 /**
  * Challenge: See if you can figure out how to use the
  * react-markdown package to render `props.recipe` as React
@@ -12,8 +14,6 @@
 
 export default function ClaudeRecipe(props) {
     return (
-        <section>
-            {props.recipe}
-        </section>
+            <ReactMarkdown>{props.recipe}</ReactMarkdown>
     )
 }
