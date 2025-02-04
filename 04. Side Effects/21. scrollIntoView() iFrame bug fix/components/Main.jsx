@@ -12,7 +12,11 @@ export default function Main() {
     
     React.useEffect(() => {
         if (recipe !== "" && recipeSection.current !== null) {
-            recipeSection.current.scrollIntoView()
+            const yCoord = recipeSection.current.getBoundingClientRect().top
+            window.scrollTo({
+                top: yCoord,
+                behavior: "smooth"
+            });
         }
     }, [recipe])
 

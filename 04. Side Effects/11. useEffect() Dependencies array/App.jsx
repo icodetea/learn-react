@@ -10,8 +10,8 @@ export default function App() {
         console.log("Effect ran")
         fetch("https://swapi.dev/api/people/1")
             .then(res => res.json())
-            // .then(data => setStarWarsData(data))
-    }, [0])
+            .then(data => setStarWarsData(data))
+    }, [count])
     
     return (
         <div>

@@ -30,6 +30,12 @@ export default function Main() {
         }))
     }
 
+    function updateMeme() {
+        setMeme(m => ({
+            ...m,
+            imageUrl: allMemes[Math.floor(Math.random() * allMemes.length)].url}))
+    }
+
     return (
         <main>
             <div className="form">
@@ -52,7 +58,8 @@ export default function Main() {
                         value={meme.bottomText}
                     />
                 </label>
-                <button>Get a new meme image 🖼</button>
+                <button
+                    onClick={updateMeme}>Get a new meme image 🖼</button>
             </div>
             <div className="meme">
                 <img src={meme.imageUrl} />
