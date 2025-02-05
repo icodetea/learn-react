@@ -2,27 +2,26 @@
     box-sizing: border-box;
 }
 
+div#root {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+}
 body {
     margin: 0;
     background-color: #0B2434;
     padding: 20px;
-    height: 100vh;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-div#root {
-    height: 100%;
-    width: 100%;
-    max-height: 400px;
-    max-width: 400px;
-}
-
 main {
+    margin: 0;
     background-color: #F5F5F5;
     height: 100%;
-    border-radius: 5px;
-    
+    border-radius: 5px; /* Rounds the corners */
 }
