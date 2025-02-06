@@ -17,17 +17,16 @@ export default function App() {
      * 1. Do we need to save a `gameWon` value in state? If so, why?
      *    If not, why not?
      * 
-     * 
+     * No
      * 
      * 2. Do we need to create a side effect to synchronize the `gameWon`
      *    value (whether it's in state or not) with the current state of 
      *    the dice?
-     * 
+     * No
      * 
      * Conclusion:
-     * 
-     * 
-     * 
+     * Check if the game is won
+     * you can render everything based on that outcome.
      */
     
     function generateAllNewDice() {

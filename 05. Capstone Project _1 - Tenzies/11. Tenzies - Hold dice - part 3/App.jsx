@@ -5,14 +5,18 @@ import { nanoid } from "nanoid"
 export default function App() {
     const [dice, setDice] = useState(generateAllNewDice())
 
-    function generateAllNewDice() {
+  function newDice() {
+    return {
+      value: Math.ceil(Math.random() * 6),
+      isHeld: false,
+      id: nanoid()
+    };
+  }
+
+  function generateAllNewDice() {
         return new Array(10)
             .fill(0)
-            .map(() => ({
-                value: Math.ceil(Math.random() * 6),
-                isHeld: false,
-                id: nanoid()
-            }))
+            .map(() => newDice())
     }
     /**
      * Challenge: Update the `rollDice` function to not just roll
@@ -25,7 +29,7 @@ export default function App() {
      */
 
     function rollDice() {
-        setDice(generateAllNewDice())
+      setDice(dice => dice.map(d => d.isHeld ? d : newDice()));
     }
 
     function hold(id) {
