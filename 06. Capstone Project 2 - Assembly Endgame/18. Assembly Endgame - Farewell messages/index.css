@@ -58,6 +58,15 @@ section.game-status > p {
     margin: 5px;
 }
 
+section.game-status > p.farewell-message {
+    font-style: italic;
+    font-weight: 400;
+    color: #8E8E8E;
+    font-size: 0.875rem;
+    max-width: 350px;
+    text-align: center;
+}
+
 section.game-status > h2 {
     font-size: 1.25rem;
     margin: 5px

@@ -110,6 +110,11 @@ section.word {
     margin-bottom: 20px;
 }
 
+section.word.wrong {
+    opacity: 0.5;
+}
+
+
 section.word > span {
     height: 40px;
     width: 40px;
@@ -120,6 +125,15 @@ section.word > span {
     font-size: 1.125rem;
     border-bottom: 1px solid #F9F4DA;
 }
+
+section.word.correct > span.correct {
+    background-color: #10A95B;
+}
+
+section.word.wrong > span {
+    background-color: #EC5D49;
+}
+
 
 section.keyboard {
     display: flex;

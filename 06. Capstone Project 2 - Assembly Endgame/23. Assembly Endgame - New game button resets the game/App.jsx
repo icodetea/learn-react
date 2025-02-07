@@ -96,6 +96,11 @@ export default function AssemblyEndgame() {
         farewell: !isGameOver && isLastGuessIncorrect
     })
 
+    function newGame() {
+        setCurrentWord(getRandomWord())
+        setGuessedLetters([])
+    }
+
     function renderGameStatus() {
         if (!isGameOver && isLastGuessIncorrect) {
             return (
@@ -172,7 +177,7 @@ export default function AssemblyEndgame() {
                 {keyboardElements}
             </section>
 
-            {isGameOver && <button className="new-game">New Game</button>}
+            {isGameOver && <button className="new-game" onClick={newGame}>New Game</button>}
         </main>
     )
 }

@@ -1,0 +1,8 @@
+import React from "react";
+
+export function Header() {
+	return <header>
+		<h1>Assembly: Endgame</h1>
+		<p>Guess the letter within 8 attempts to keep the	programming world safe from Assembly!</p>
+	</header>;
+}

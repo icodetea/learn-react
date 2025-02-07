@@ -4,8 +4,11 @@ import { languages } from "./languages"
 
 /**
  * Backlog:
- * 
- * 
+ * Farewell messages in status section
+ * Fix ally issues
+ * Make new Game Button work
+ * Choose a random word from a list of word
+ * Confetti drop when the user wins
  */
 
 export default function AssemblyEndgame() {

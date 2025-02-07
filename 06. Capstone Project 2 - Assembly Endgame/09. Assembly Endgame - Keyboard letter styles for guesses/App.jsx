@@ -49,6 +49,9 @@ export default function AssemblyEndgame() {
     const keyboardElements = alphabet.split("").map(letter => (
         <button
             key={letter}
+            className={guessedLetters.includes(letter) ?
+                currentWord.includes(letter) ? "correct" : "wrong"
+                : ""}
             onClick={() => addGuessedLetter(letter)}
         >
             {letter.toUpperCase()}

@@ -39,7 +39,9 @@ export default function AssemblyEndgame() {
         )
     })
 
-    const letterElements = currentWord.split("").map((letter, index) => (
+    const letterElements = currentWord.split("")
+        .map(letter => (guessedLetters.includes(letter) ? letter : " "))
+        .map((letter, index) => (
         <span key={index}>{letter.toUpperCase()}</span>
     ))
 
@@ -51,8 +53,6 @@ export default function AssemblyEndgame() {
             correct: isCorrect,
             wrong: isWrong
         })
-        
-        console.log(className)
         
         return (
             <button

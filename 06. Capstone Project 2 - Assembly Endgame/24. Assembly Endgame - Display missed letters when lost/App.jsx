@@ -69,9 +69,13 @@ export default function AssemblyEndgame() {
         )
     })
 
+    const letterElementsClass = clsx("word", {
+        correct: currentWord.includes(lastGuessedLetter),
+        wrong: guessedLetters.includes(lastGuessedLetter) && !currentWord.includes(lastGuessedLetter)
+    })
     const letterElements = currentWord.split("").map((letter, index) => (
         <span key={index}>
-            {guessedLetters.includes(letter) ? letter.toUpperCase() : ""}
+            {guessedLetters.includes(letter) || isGameOver ? letter.toUpperCase() : ""}
         </span>
     ))
 
@@ -153,7 +157,7 @@ export default function AssemblyEndgame() {
                 {languageElements}
             </section>
 
-            <section className="word">
+            <section className={letterElementsClass}>
                 {letterElements}
             </section>
             
